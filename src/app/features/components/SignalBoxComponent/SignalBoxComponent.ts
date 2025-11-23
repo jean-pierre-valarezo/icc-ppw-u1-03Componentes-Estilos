@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-signal-box',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './signalboxcomponent.html',
+  templateUrl: './SignalBoxComponent.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignalBoxComponent {
