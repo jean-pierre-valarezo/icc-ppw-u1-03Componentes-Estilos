@@ -11,16 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 22   # 👈 CORREGIDO
+          node-version: '22'   # 👈 ESTA ES LA CLAVE
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Angular app
         run: npm run build -- --output-path=dist --base-href="/icc-ppw-u1-03Componentes-Estilos/"
